@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Rehan</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <!-- Heroicons CDN for icons -->
+    <script src="https://unpkg.com/heroicons@2.0.13/dist/24/outline.js"></script>
+    <style>
+        body {
+            background: #f9fafb;
+            color: #222;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 32px;
+            animation: fadeIn 1.2s ease;
+            transition: box-shadow 0.3s;
+        }
+        .container:hover {
+            box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+        }
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #e0e7ef;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            animation: popIn 1s cubic-bezier(.68,-0.55,.27,1.55);
+            transition: transform 0.4s;
+        }
+        .profile-img:hover {
+            transform: scale(1.07) rotate(-3deg);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        .section {
+            margin-bottom: 36px;
+            animation: slideUp 1s ease;
+            background: #f3f6fa;
+            border-radius: 12px;
+            padding: 24px 20px 18px 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            position: relative;
+            transition: box-shadow 0.3s, background 0.3s;
+        }
+        .section:hover {
+            background: #e0e7ef;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+        }
+        .section-icon {
+            width: 32px;
+            height: 32px;
+            position: absolute;
+            left: -16px;
+            top: 18px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: iconPop 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        .skills-list, .hobby-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            list-style: none;
+            padding: 0;
+        }
+        .skills-list li, .hobby-list li {
+            background: #e0e7ef;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .skills-list li:hover, .hobby-list li:hover {
+            background: #c7d2fe;
+            transform: scale(1.08) rotate(-2deg);
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0;}
+            to { opacity: 1;}
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.7); opacity: 0;}
+            100% { transform: scale(1); opacity: 1;}
+        }
+        @keyframes slideUp {
+            from { transform: translateY(40px); opacity: 0;}
+            to { transform: translateY(0); opacity: 1;}
+        }
+        @keyframes iconPop {
+            0% { transform: scale(0.5); opacity: 0;}
+            100% { transform: scale(1); opacity: 1;}
+        }
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+                margin: 10px;
+            }
+            .profile-img {
+                width: 90px;
+                height: 90px;
+            }
+            .section {
+                padding: 16px 8px 12px 16px;
+            }
+            .section-icon {
+                width: 24px;
+                height: 24px;
+                left: -10px;
+                top: 10px;
+            }
+            .skills-list li, .hobby-list li {
+                padding: 8px 12px;
+                font-size: 0.98em;
+            }
+            .profile-header {
+                flex-direction: column;
+                align-items: flex-start !important;
+                gap: 16px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Foto Profil dan Nama -->
+        <div class="profile-header" style="display: flex; align-items: center; gap: 32px; margin-bottom: 32px;">
+            <img src="src/foto-profil.jpg" alt="Foto Profil Rehan" class="profile-img">
+            <div>
+                <h1>Rehan Pratama</h1>
+                <p style="font-size: 1.2em; color: #555; margin:0;">Mahasiswa Informatika</p>
+            </div>
+        </div>
+
+        <!-- About Me -->
+        <section class="section" style="animation-delay: 0.2s;">
+            <span class="section-icon">
+                <svg width="24" height="24" fill="none" stroke="#6366f1" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/user.svg#icon"></use></svg>
+            </span>
+            <h2 style="margin-left:28px;">About Me</h2>
+            <p>
+                Saya adalah mahasiswa Informatika yang memiliki minat besar di bidang pengembangan web dan teknologi. Saya suka belajar hal baru dan selalu berusaha memberikan yang terbaik dalam setiap proyek yang saya kerjakan.
+            </p>
+        </section>
+
+        <!-- Keahlian -->
+        <section class="section" style="animation-delay: 0.4s;">
+            <span class="section-icon">
+                <svg width="24" height="24" fill="none" stroke="#f59e42" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/bolt.svg#icon"></use></svg>
+            </span>
+            <h2 style="margin-left:28px;">Keahlian</h2>
+            <ul class="skills-list">
+                <li><svg width="20" height="20" fill="none" stroke="#6366f1" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/code-bracket.svg#icon"></use></svg>HTML & CSS</li>
+                <li><svg width="20" height="20" fill="none" stroke="#f59e42" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/cube-transparent.svg#icon"></use></svg>JavaScript</li>
+                <li><svg width="20" height="20" fill="none" stroke="#10b981" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/sparkles.svg#icon"></use></svg>React</li>
+                <li><svg width="20" height="20" fill="none" stroke="#6366f1" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/command-line.svg#icon"></use></svg>Python</li>
+                <li><svg width="20" height="20" fill="none" stroke="#f59e42" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/pencil-square.svg#icon"></use></svg>UI/UX Design</li>
+                <li><svg width="20" height="20" fill="none" stroke="#222" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/device-phone-mobile.svg#icon"></use></svg>Git & GitHub</li>
+            </ul>
+        </section>
+
+        <!-- Pendidikan -->
+        <section class="section" style="animation-delay: 0.6s;">
+            <span class="section-icon">
+                <svg width="24" height="24" fill="none" stroke="#10b981" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/building-library.svg#icon"></use></svg>
+            </span>
+            <h2 style="margin-left:28px;">Pendidikan</h2>
+            <ul>
+                <li><strong>Universitas Contoh</strong> (2022 - Sekarang)<br> S1 Informatika</li>
+                <li><strong>SMA Negeri 1 Contoh</strong> (2019 - 2022)</li>
+            </ul>
+        </section>
+
+        <!-- Hobby -->
+        <section class="section" style="animation-delay: 0.8s;">
+            <span class="section-icon">
+                <svg width="24" height="24" fill="none" stroke="#f59e42" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/heart.svg#icon"></use></svg>
+            </span>
+            <h2 style="margin-left:28px;">Hobby</h2>
+            <ul class="hobby-list">
+                <li><svg width="18" height="18" fill="none" stroke="#6366f1" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/computer-desktop.svg#icon"></use></svg>Ngoding</li>
+                <li><svg width="18" height="18" fill="none" stroke="#f59e42" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/photo.svg#icon"></use></svg>Desain Grafis</li>
+                <li><svg width="18" height="18" fill="none" stroke="#10b981" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/musical-note.svg#icon"></use></svg>Bermain Musik</li>
+                <li><svg width="18" height="18" fill="none" stroke="#6366f1" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/camera.svg#icon"></use></svg>Fotografi</li>
+                <li><svg width="18" height="18" fill="none" stroke="#f59e42" stroke-width="2"><use href="https://unpkg.com/heroicons@2.0.13/24/outline/device-game-controller.svg#icon"></use></svg>Bermain Game</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
